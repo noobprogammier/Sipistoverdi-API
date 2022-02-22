@@ -7,5 +7,5 @@
 | -------------- | ----------------- | ----------------|
 | Fast, reliable | Reading is fast,  | XML is a standard,
                  | very easy to use. | while mine is not. 
-  more hard to   |                   | I will keep upgr-
+  more hard to   |                   | I will keep upgr
   use            |                   | ading it. 
