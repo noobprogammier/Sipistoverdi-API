@@ -3,10 +3,10 @@
 - You can visit my service, here: [sipistoverdi](http://sipistoverdi.viewdns.net)
 ## XML vs Sipistoverdi ML 
 
-|   XML vs SML                                           |
+|    1           |         2         |           3
 | -------------- | ----------------- | ------------------|
 | Fast, reliable | Reading is fast,  |                   |
 |                | very easy to use. |                   |
 | more hard to   |                   |                   |
-| use            |                   | 
-|                |                   |                  
+| use            |                   |                   |
+|                |                   |                   |
