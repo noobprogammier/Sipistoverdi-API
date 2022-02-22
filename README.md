@@ -56,3 +56,21 @@ if __name__ == "__main__":
 	getter.results
 	
 ```
+-Outputs-Dict: 
+```json
+{'Github': 'Github is the best platform!', 'Github-1': 'Github has many users, and they are thankful!', 'Test': 'That is other variable', 'Test-3': 'A description for Test.'}
+```
+-Outputs-SML:
+```xml
+<sipistoverdi version='0.1'>
+<INFO-TYPE name="Information"> Hello, from Sipistoverdi. Greetings, Github user! </name="Information"-closed>
+
+<root-open>
+
+     <name="Github"> Github is the best platform! </name-closed="Github">
+          <description name="Github"> Github has many users, and they are thankful! </description-closed>
+     <name="Test"> That is other variable </name-closed="Test">
+          <description name="Test"> A description for Test. </description-closed>
+
+<root-closed>
+```
