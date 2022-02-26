@@ -121,3 +121,13 @@ class CreateDocument(LoadAttributes):
 		self.document = "\x0A".join(bob for bob in self.document.split("\r\x0A"))
 		open(file_name, "w", encoding=self.encoding).write(self.document.strip())
 		warn(">> File created, written lines '%d'b !"%(len(self.document)))
+#root = CreateDocument()
+#root.addExplain(element="info", description="This is only for testing!")
+#root.addRoot(function="open")
+#root.add_Element(element="Ada", value="Ada Lovelace")
+#root.add_SubDesc(focus="Ada", description="Ada Lovelace is the first woman programmer!")
+#root.add_Element(element="Abba", value="Abba (group)")
+#root.add_SubDesc(focus="Abba", description="Abba is a very good group!")
+#root.addRoot(function="closed")
+#document_attribute = root.ToStr
+#print(document_attribute.clear())
