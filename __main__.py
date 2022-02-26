@@ -78,9 +78,3 @@ class requestAPI(create_socks):
 		if type(newvalue_Option) != str or isinstance(newvalue_Option, str) == False:
 			raise errors(errors.errorsx["ITYPE"])
 		self.option = newvalue_Option
-xz_ = requestAPI(default_contextx=True,ssl=True, port=56152)
-xz_.set_verbose = True
-xz_.set_option = "crtAcc"
-xz_.set_account = ["bbcff5", "bbcfgg3"]
-output = xz_.postReqSML
-
